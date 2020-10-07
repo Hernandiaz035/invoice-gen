@@ -11,13 +11,11 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     abn = models.CharField(
-        min_lenght=10,
         max_length=20,
         blank=True,
         null=True
     )
     phone = models.CharField(
-        min_lenght=10,
         max_length=30,
         blank=True,
         null=True
