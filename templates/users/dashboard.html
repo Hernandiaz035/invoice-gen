@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block head_content %}
+    <title>Landing</title>
+{% endblock head_content %}
+
+{% block content %}
+  {% include "nav.html" %}
+
+  <h1>{{ request.user.username }}</h1>
+
+{% endblock content %}
