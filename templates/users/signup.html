@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+
+{% block head_content %}
+    <title>User Signup</title>
+{% endblock head_content %}
+
+{% block content %}
+
+    <form action="{% url 'users:signup' %}" method='Post'>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" name="signup" id="signup" class="btn btn-primary btn-lg btn-block">SignUp</button>
+    </form>
+
+{% endblock content %}
