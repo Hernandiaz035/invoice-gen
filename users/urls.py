@@ -16,6 +16,12 @@ urlpatterns = [
     ),
 
     path(
+        route='logout/',
+        view=views.auth_views.LogoutView.as_view(),
+        name='logout'
+    ),
+
+    path(
         route='dashboard/',
         view=views.dashboardView,
         name='dashboard'
