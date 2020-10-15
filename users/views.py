@@ -3,6 +3,7 @@
 # Django
 from django.contrib.auth import views as auth_views
 from django.views.generic.edit import FormView
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.urls.base import reverse_lazy
 
@@ -27,5 +28,6 @@ class SignupView(FormView):
         return super().form_valid(form)
 
 
+@login_required
 def dashboardView(request):
     return render(request, 'users/dashboard.html')
