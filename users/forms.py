@@ -47,24 +47,6 @@ class ProfileForm(forms.Form):
         widget=forms.widgets.EmailInput(attrs=style_attributes),
     )
 
-    # abn = forms.CharField(
-    #     max_length=20,
-    #     blank=True,
-    #     null=True
-    # )
-    # phone = forms.CharField(
-    #     max_length=30,
-    #     blank=True,
-    #     null=True
-    # )
-
-    # address = forms.CharField(max_length=50)
-
-    # bank_name = forms.CharField(max_length=30)
-    # account_name = forms.CharField(max_length=30)
-    # account_bsb = forms.CharField(max_length=10)
-    # account_number = forms.CharField(max_length=20)
-
     def clean_username(self):
         """Username must be unique"""
         username = self.cleaned_data.get("username")
